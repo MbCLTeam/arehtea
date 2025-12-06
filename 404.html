@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página não encontrada | Aethera Project</title>
+    
+    <meta name="description" content="Página não encontrada.">
+    <meta name="robots" content="noindex, follow">
+    
+    <link rel="shortcut icon" href="https://aethera.cubie.com.br/assets/logo.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #8a2be2 0%, #c533c5 100%);
+            --primary-gradient-hover: linear-gradient(135deg, #c533c5 0%, #8a2be2 100%);
+            --dark-bg: #101014;
+            --card-bg: #1c1c22;
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --border-color: #2d2d3a;
+            --glow-color: rgba(197, 51, 197, 0.3);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 25%, rgba(138, 43, 226, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 85% 75%, rgba(197, 51, 197, 0.1) 0%, transparent 25%);
+            margin: 0;
+        }
+
+        .navbar {
+            background: rgba(16, 16, 20, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--text-primary) !important;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary) !important;
+            transition: color 0.3s ease;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #c533c5 !important;
+        }
+
+        .nav-link i {
+            margin-right: 5px;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .content-wrapper {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 30px rgba(138, 43, 226, 0.4);
+            animation: pulse-glow 3s infinite alternate;
+        }
+
+        .error-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .error-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .btn-custom {
+            background-image: var(--primary-gradient);
+            padding: 12px 35px;
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--glow-color);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--dark-bg);
+            text-align: center;
+            padding: 30px 15px;
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #c533c5;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .f-brand {
+            height: 30px;
+            opacity: 0.6;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .f-brand:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .footer-brands {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        @keyframes pulse-glow {
+            0% { text-shadow: 0 2px 30px rgba(138, 43, 226, 0.2); }
+            100% { text-shadow: 0 2px 50px rgba(197, 51, 197, 0.6); }
+        }
+
+        @media (max-width: 768px) {
+            .error-code { font-size: 6rem; }
+            .error-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">Aethera Project</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cubie.com.br"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cubie.com.br/spprt"><i class="fas fa-envelope"></i> Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/AetheraDev/"><i class="fab fa-github"></i> Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container content-wrapper">
+            
+            <div class="error-code">404</div>
+            <h2 class="error-title">Página não encontrada</h2>
+            
+            <p class="error-description">
+                Ops! A página que você está procurando parece ter se perdido no éter ou não existe mais.
+            </p>
+
+            <a href="/" class="btn-custom">
+                <i class="fas fa-arrow-left"></i> Voltar ao Início
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Aethera Project © 2023 - <span id="year"></span></p>
+        <p>Powered by <a href="https://cubie.com.br">CubieCloud</a></p>
+        <div class="footer-brands">
+            <img src="https://content.cubie.com.br/assets/cubiecloud-watermark.png" alt="Marca d'água CubieCloud" class="f-brand">
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" xintegrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"451bea39c90d4dccb7f3eff7c44d94ee","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+</body>
+</html>
